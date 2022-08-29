@@ -43,7 +43,13 @@ class User extends Authenticatable
     ];
 
 
-    public function contact(){
-            return $this->hasOne(Contact::class);
+    public function contact()
+    {
+        return $this->hasOne(Contact::class);
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 }
